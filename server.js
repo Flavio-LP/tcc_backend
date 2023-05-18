@@ -82,3 +82,7 @@ app.get('/corrente_turbina',async (req,res) => {
     query = await CORRENTE_TURBINA(data)
     return res.status(201).json(query)
 })
+
+app.get('/teste',async (req,res) => {
+    return res.status(201).json('teste')
+})
