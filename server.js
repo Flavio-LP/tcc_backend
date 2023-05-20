@@ -10,6 +10,9 @@ const CORRENTE_TURBINA = require('./corrente_turbina')
 const TENSAO_TURBINA = require('./tensao_turbina')
 let data;
 const app = express();
+var cors = require('cors')
+
+app.use(cors())
 
 app.use(express.json());
 
