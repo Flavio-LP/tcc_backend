@@ -17,17 +17,12 @@ app.use(function (req, res, next) { //allow cross origin requests
     //res.setHeader("Access-Control-Allow-Methods", "POST, PUT, OPTIONS, DELETE, GET");
     //res.header("Access-Control-Allow-Origin", "http://localhost:3000");
     //res.header("Access-Control-Allow-Origin", "https://tccreact-production.up.railway.app/");
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, 
-    Accept, x-client-key, x-client-token, x-client-secret, Authorization");
-      next();
-  // res.header("Access-Control-Allow-Origin": "*");
-   //res.header("Access-Control-Allow-Methods": "*");
+   res.header("Access-Control-Allow-Origin": "*");
+   res.header("Access-Control-Allow-Methods": "*");
    //res.header("Access-Control-Allow-Headers": "'Access-Control-Allow-Headers: Origin, Content-Type, X-Auth-Token'");
-    //res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    //res.header("Access-Control-Allow-Credentials", true);
-    //next();
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    res.header("Access-Control-Allow-Credentials", true);
+    next();
 });
 
 const PORT = process.env.PORT || 3000;
