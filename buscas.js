@@ -29,14 +29,18 @@ const buscas = async(data) =>{
                                             ' LIMIT '+ 
                                                     '1 '
                                                     )
-        if (day[0][0] == undefined){
+        if (day[0][0] == undefined || day[0][0] == null){
                 
                 query.push("0.00")
         }else{
-                query.push((day[0][0]['IRRADIACAO_SOLAR_PLACA']).toFixed(2))
+                if(day[0][0]['IRRADIACAO_SOLAR_PLACA'] == null){
+                query.push("0.00")
+                }else{
+                        query.push((day[0][0]['IRRADIACAO_SOLAR_PLACA']).toFixed(2))
+                }
+                
         } 
         }
-
     return query;
 
 }
