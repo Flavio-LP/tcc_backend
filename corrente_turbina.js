@@ -38,7 +38,7 @@ const CORRENTE_TURBINA = async(data) =>{
                 sum = sum + aux
         } 
         }
-    return (sum/query.length).toFixed(7);
+    return (sum/query.length).toFixed(2);
 
 }
 
