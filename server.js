@@ -28,7 +28,7 @@ app.use(function (req, res, next) { //allow cross origin requests
     next();
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8000;
 
 app.listen(PORT, () => { console.log(`Rodando na porta ${PORT}`) })
 
